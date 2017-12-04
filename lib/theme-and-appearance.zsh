@@ -1,12 +1,12 @@
 # ls colors
 autoload -U colors && colors
 
-# Enable ls colors
-export LSCOLORS="Gxfxcxdxbxegedabagacad"
-
 # TODO organise this chaotic logic
 
 if [[ "$DISABLE_LS_COLORS" != "true" ]]; then
+  # Enable ls colors
+  export LSCOLORS="Gxfxcxdxbxegedabagacad"
+
   # Find the option for using colors in ls, depending on the version
   if [[ "$OSTYPE" == netbsd* ]]; then
     # On NetBSD, test if "gls" (GNU ls) is installed (this one supports colors);
